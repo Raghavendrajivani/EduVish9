@@ -1,0 +1,213 @@
+/* EduVish9 interface system; final palette overrides follow the component styles. */
+:root{--background:255 100% 99%;--foreground:258 42% 15%;--card:0 0% 100%;--card-foreground:258 42% 15%;--popover:0 0% 100%;--popover-foreground:258 42% 15%;--primary:263 82% 56%;--primary-foreground:0 0% 100%;--secondary:256 80% 96%;--secondary-foreground:258 42% 22%;--muted:256 45% 96%;--muted-foreground:252 16% 45%;--accent:263 82% 95%;--accent-foreground:263 82% 38%;--border:252 35% 89%;--input:252 35% 89%;--ring:263 82% 56%;--radius:1.15rem}
+html{scroll-behavior:smooth}body.antialiased{color:#241b3d;background:radial-gradient(ellipse at 12% 0%,#f0eaff 0,transparent 42%),linear-gradient(180deg,#fbfaff,#f5f1ff 58%,#fbfaff);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+/* Common panels become light, raised cards while retaining their original layout. */
+.glass-card,[class*="bg-white/"],[class*="bg-slate-900"],[class*="bg-slate-950"],[class*="bg-[#060913]"]{background-color:rgba(255,255,255,.9)!important;background-image:none;border-color:#e5ddf6!important;box-shadow:0 12px 34px rgba(65,40,120,.075)}
+[class~="text-white"],[class~="text-slate-200"],[class~="text-slate-300"],[class~="text-slate-400"]{color:#51466a!important}
+[class~="text-slate-950"]{color:#fff!important}
+[class~="text-emerald-400"],[class~="text-cyan-400"],[class~="text-teal-400"],[class~="text-emerald-300"]{color:#7138e8!important}
+[class*="border-white/"],[class*="border-slate-800"],[class*="border-emerald-500/"],[class*="border-cyan-500/"]{border-color:#e5ddf6!important}
+[class*="bg-emerald-500/"],[class*="bg-cyan-500/"],[class*="bg-teal-500/"]{background-color:#f0eaff!important;color:#6330ce!important}
+[class~="bg-emerald-500"],[class~="bg-cyan-500"],[class~="bg-teal-500"]{background:#7138e8!important;color:#fff!important}
+[class*="bg-emerald-500/90"],[class*="bg-cyan-500/90"],[class*="bg-teal-500/90"],[class*="bg-emerald-500/80"],[class*="bg-cyan-500/80"],[class*="bg-teal-500/80"]{background:linear-gradient(115deg,#7b3ff2,#5722d4)!important;color:#fff!important;box-shadow:0 8px 22px rgba(101,49,218,.22)!important}
+[class*="from-emerald-"],[class*="to-cyan-"],[class*="via-emerald-"]{--tw-gradient-from:#bba0ff var(--tw-gradient-from-position)!important;--tw-gradient-to:rgba(187,160,255,0) var(--tw-gradient-to-position)!important;--tw-gradient-stops:var(--tw-gradient-from),#8b5cf6 var(--tw-gradient-via-position),#ede7ff var(--tw-gradient-to-position)!important}
+button,[role="button"]{border-radius:999px;transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}button:hover,[role="button"]:hover{transform:translateY(-1px)}
+input,select,textarea{color:#241b3d!important;background:#fff!important;border-color:#e2d9f3!important;border-radius:.9rem!important;box-shadow:0 1px 2px rgba(55,32,100,.04)}input::placeholder,textarea::placeholder{color:#9388a9!important}input:focus,select:focus,textarea:focus{outline:2px solid #c9b3ff;outline-offset:1px}
+a{transition:color .18s ease,background-color .18s ease}a:hover{color:#7138e8}
+header{border-color:#e9e2f5!important}body.antialiased>div>header{background:rgba(255,255,255,.84)!important;backdrop-filter:blur(18px);box-shadow:0 4px 22px rgba(65,40,120,.045)}
+.eduvish-main{min-height:60vh}.eduvish-main>div{width:100%}
+body[data-eduvish-type="catalog"] main,body[data-eduvish-type="subject"] main,body[data-eduvish-type="guide"] main,body[data-eduvish-type="legal"] main,body[data-eduvish-type="interactive"] main{padding-top:clamp(1.5rem,4vw,3.5rem)}
+body[data-eduvish-type="catalog"] main h1,body[data-eduvish-type="subject"] main h1,body[data-eduvish-type="guide"] main h1,body[data-eduvish-type="legal"] main h1,body[data-eduvish-type="interactive"] main h1{letter-spacing:-.045em;line-height:1.08}
+body[data-eduvish-type="catalog"] main h2,body[data-eduvish-type="subject"] main h2,body[data-eduvish-type="guide"] main h2{letter-spacing:-.025em}
+body[data-eduvish-type="catalog"] main .glass-card,body[data-eduvish-type="subject"] main .glass-card,body[data-eduvish-type="guide"] main .glass-card,body[data-eduvish-type="legal"] main .glass-card,body[data-eduvish-type="interactive"] main .glass-card{border-radius:1.5rem}
+.eduvish-quick-tools{padding:clamp(1.35rem,3vw,2rem);border:1px solid #e8e0f5;border-radius:1.65rem;background:linear-gradient(140deg,rgba(255,255,255,.96),rgba(246,241,255,.96));box-shadow:0 18px 48px rgba(78,49,133,.08)}
+.eduvish-tools-heading{display:flex;align-items:end;justify-content:space-between;gap:1rem;margin-bottom:1.2rem}.eduvish-kicker{font-size:.68rem;font-weight:850;letter-spacing:.16em;color:#7a4be3}.eduvish-tools-heading h2{margin:.35rem 0 0;font-size:clamp(1.2rem,2vw,1.65rem);font-weight:850;letter-spacing:-.04em;color:#261c42}.eduvish-tools-note{font-size:.85rem;color:#766b8a}.eduvish-tools-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}.eduvish-tool-card{min-width:0;display:flex;align-items:center;gap:.8rem;padding:1rem;border:1px solid #e8e0f5;border-radius:1.15rem;background:#fff;color:#2e2447!important;box-shadow:0 5px 16px rgba(63,42,113,.045)}.eduvish-tool-card:hover{border-color:#cbb8f5;box-shadow:0 12px 24px rgba(90,50,170,.12);transform:translateY(-2px)}.eduvish-tool-icon{display:grid;place-items:center;width:2.7rem;height:2.7rem;flex:0 0 2.7rem;border-radius:1rem;color:#6b35d6;background:linear-gradient(145deg,#f2eaff,#e4d6ff)}.eduvish-tool-icon svg{width:1.3rem;height:1.3rem}.eduvish-tool-copy{min-width:0;display:flex;flex-direction:column;gap:.18rem}.eduvish-tool-copy strong{font-size:.95rem;font-weight:800;color:#2d2148}.eduvish-tool-copy small{font-size:.72rem;line-height:1.35;color:#807590}.eduvish-tool-arrow{margin-left:auto;color:#8b5de4;font-size:1.1rem}
+.eduvish-footer{margin-top:clamp(3rem,8vw,7rem)!important;border-top:1px solid #e5ddf6!important;background:linear-gradient(180deg,#f4efff,#eee7fc)!important;color:#554a6e!important}.eduvish-footer-inner{width:min(1280px,100% - 2rem);margin:auto;padding:3.5rem 0 1.2rem}.eduvish-footer-top{display:grid;grid-template-columns:minmax(220px,1fr) minmax(0,2.2fr);gap:3rem;padding-bottom:2.5rem}.eduvish-footer-brand p{max-width:390px;margin:1rem 0;color:#665b7d;font-size:.9rem;line-height:1.75}.eduvish-brand{display:inline-flex;align-items:center;gap:.8rem;color:#281c43!important}.eduvish-brand img{width:3.2rem;height:3.2rem;object-fit:contain;border-radius:1rem;box-shadow:0 6px 16px rgba(70,35,140,.14)}.eduvish-brand span{display:flex;flex-direction:column}.eduvish-brand strong{font-size:1.55rem;letter-spacing:-.045em;font-weight:900}.eduvish-brand small{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:#817595;font-weight:800}.eduvish-social{display:flex;flex-wrap:wrap;gap:.55rem}.eduvish-social a{padding:.45rem .75rem;border:1px solid #e1d7f3;border-radius:999px;background:rgba(255,255,255,.7);color:#6840b3!important;font-size:.75rem;font-weight:700}.eduvish-social a:hover{background:#fff;border-color:#bea6ef}.eduvish-footer-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.4rem}.eduvish-footer-group h2{margin:.25rem 0 .9rem;color:#30234d;font-size:.82rem;font-weight:850;letter-spacing:.02em}.eduvish-footer-group ul{display:grid;gap:.58rem;margin:0;padding:0;list-style:none}.eduvish-footer-group a{color:#665b7d!important;font-size:.79rem;line-height:1.45}.eduvish-footer-group a:hover{color:#6833d1!important}.eduvish-footer-bottom{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding-top:1.2rem;border-top:1px solid #ded4ee;color:#786d8d;font-size:.72rem}.eduvish-footer-bottom p{margin:0;max-width:800px}
+/* Standalone privacy page palette */
+body:not(.antialiased){color:#2c2146!important;background:radial-gradient(ellipse at 12% 0%,#f0eaff 0,transparent 42%),linear-gradient(180deg,#fbfaff,#f5f1ff 60%,#fbfaff)!important}body:not(.antialiased) header{background:rgba(255,255,255,.88)!important;border-color:#e9e2f5!important}body:not(.antialiased) .brand,body:not(.antialiased) .hero h1{color:#241b3d!important}body:not(.antialiased) .links,body:not(.antialiased) .links a,body:not(.antialiased) .hero p,body:not(.antialiased) .updated,body:not(.antialiased) .policy p,body:not(.antialiased) .policy ul{color:#51466a!important}body:not(.antialiased) a,body:not(.antialiased) .eyebrow,body:not(.antialiased) .policy h3{color:#7138e8!important}body:not(.antialiased) .policy section{background:rgba(255,255,255,.92)!important;border-color:#e5ddf6!important;box-shadow:0 12px 34px rgba(65,40,120,.08)!important}body:not(.antialiased) .policy h2{color:#2c2146!important}body:not(.antialiased) .notice{background:#f0eaff!important;border-color:#d9c8ff!important;color:#51406f!important}body:not(.antialiased) footer{background:#f2edfb!important;color:#6c6280!important;border-color:#e9e2f5!important}body:not(.antialiased) .back-button{background:#fff!important;color:#5a36a8!important;border-color:#e5ddf6!important;border-radius:999px!important}
+@media(max-width:900px){.eduvish-footer-top{grid-template-columns:1fr;gap:2rem}.eduvish-footer-brand p{max-width:640px}}
+@media(max-width:680px){.eduvish-tools-heading{align-items:flex-start;flex-direction:column;gap:.35rem}.eduvish-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.eduvish-tool-card{padding:.8rem;gap:.55rem}.eduvish-tool-icon{width:2.35rem;height:2.35rem;flex-basis:2.35rem;border-radius:.8rem}.eduvish-tool-copy strong{font-size:.85rem}.eduvish-tool-copy small{font-size:.67rem}.eduvish-tool-arrow{display:none}.eduvish-footer-inner{width:calc(100% - 1.5rem);padding-top:2.5rem}.eduvish-footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 1rem}.eduvish-footer-bottom{align-items:flex-start;flex-direction:column}.eduvish-footer-group ul{gap:.48rem}}
+@media(max-width:390px){.eduvish-tools-grid{grid-template-columns:1fr}.eduvish-tool-card{padding:.85rem 1rem}.eduvish-footer-columns{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Align the source site's custom gradient utilities with the violet theme. */
+.text-gradient,[class*="text-gradient-"]{background-image:linear-gradient(110deg,#5d30c8,#9566ef)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;color:#7138e8!important}
+.eduvish-main [class*="bg-gradient-to-br"],[class*="bg-gradient-to-br"][class*="from-amber-"],[class*="bg-gradient-to-br"][class*="from-orange-"],[class*="bg-gradient-to-br"][class*="from-yellow-"]{background-image:linear-gradient(135deg,#f2ecff,#fff)!important}
+
+/* Brighten the image-backed branch cards so dark copy never sits on a dark overlay. */
+#browse a > div > div[class*="bg-gradient-to-t"]{background-image:linear-gradient(to top,rgba(239,233,250,.98),rgba(247,243,255,.72),rgba(255,255,255,.25))!important}
+#browse a > div > div.bg-cover{opacity:.2;filter:saturate(.8)}
+#browse a h3{color:#382858!important;text-shadow:none!important}#browse a p{color:#74658e!important}
+@media(max-width:680px){.eduvish-footer-inner{padding-bottom:6.5rem}}
+
+/* Keep floating social actions in the content flow so they do not cover cards or forms. */
+.eduvish-main div[class*="fixed"][class*="bottom-24"][class*="left-4"]{position:static!important;inset:auto!important;transform:none!important;z-index:auto!important;flex-direction:row!important;justify-content:center;margin:1.25rem auto 2rem}
+/* Reuse bright, image-backed tiles on branch and resource catalog pages. */
+body[data-eduvish-type="catalog"] main [class*="bg-gradient-to-t"][class*="from-slate-950"]{background-image:linear-gradient(to top,rgba(239,233,250,.98),rgba(247,243,255,.72),rgba(255,255,255,.25))!important}
+body[data-eduvish-type="catalog"] main .bg-cover{opacity:.2;filter:saturate(.8)}
+
+.eduvish-feature-top{display:flex;justify-content:space-between;align-items:center;gap:.75rem}.eduvish-feature-tag{padding:.35rem .65rem;border-radius:999px;background:#f0eaff;color:#6732cf;font-size:.68rem;font-weight:850;letter-spacing:.06em}.eduvish-feature-copy h3{margin:.5rem 0;color:#2d2148;font-size:clamp(1.2rem,2vw,1.65rem);font-weight:900;line-height:1.2}.eduvish-feature-copy p{margin:0;color:#706481;font-size:.9rem;line-height:1.6}.eduvish-feature-link{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid #e8e0f5;color:#6c3bd1;font-size:.86rem;font-weight:750}
+
+/* Softer, consistent controls across the redesigned pages. */
+.eduvish-main button,.eduvish-main [role="button"]{border-radius:1rem!important;font-weight:650;letter-spacing:-.01em;transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.eduvish-main button:focus-visible,.eduvish-main [role="button"]:focus-visible,.eduvish-main a:focus-visible{outline:3px solid #b69afa!important;outline-offset:3px}
+.eduvish-main button:disabled,.eduvish-main [role="button"][aria-disabled="true"]{cursor:not-allowed;opacity:.55;transform:none!important}
+
+/* Mobile navigation: a readable glass dock with a clear floating action. */
+@media(max-width:639px){
+  .eduvish-mobile-nav{left:max(12px,env(safe-area-inset-left))!important;right:max(12px,env(safe-area-inset-right))!important;bottom:max(12px,env(safe-area-inset-bottom))!important;height:78px!important;overflow:visible!important;border:1px solid #e7def4!important;border-radius:40px!important;background:rgba(255,255,255,.96)!important;backdrop-filter:blur(18px);box-shadow:0 12px 36px rgba(65,40,120,.16)!important;z-index:60!important}
+  .eduvish-mobile-nav>div{grid-template-columns:repeat(5,minmax(0,1fr))!important;padding:0 9px!important}
+  .eduvish-mobile-nav>div>a{gap:.32rem!important;border-radius:24px!important;color:#615673!important;text-decoration:none}
+  .eduvish-mobile-nav>div>a:hover{background:#f4effc!important;color:#5d30c8!important}
+  .eduvish-mobile-nav>div>a[class*="text-emerald-400"]{color:#6735d0!important}
+  .eduvish-mobile-nav svg{width:22px!important;height:22px!important}
+  .eduvish-mobile-nav span{font-size:10px!important;font-weight:650!important;line-height:1.1}
+  .eduvish-mobile-actions{bottom:max(29px,calc(env(safe-area-inset-bottom) + 29px))!important;z-index:61!important}
+  .eduvish-mobile-actions>div>button{width:64px!important;height:64px!important;padding:0!important;border:2px solid #fff!important;border-radius:50%!important;background:linear-gradient(145deg,#a47bff,#7138e8)!important;color:#fff!important;box-shadow:0 8px 24px rgba(90,48,180,.3),0 0 0 1px rgba(99,60,173,.14)!important}
+  .eduvish-mobile-actions>div>button:hover{background:linear-gradient(145deg,#9567f4,#602dc9)!important;box-shadow:0 11px 28px rgba(90,48,180,.38)!important;transform:translateY(-2px)}
+  .eduvish-mobile-actions>div>button svg{width:25px!important;height:25px!important;color:#fff!important}
+}
+
+/* Calculator: lower the weight and increase text contrast on its light cards. */
+.eduvish-calculator{color:#514761}
+.eduvish-calculator :is(h1,h2,h3,h4){color:#2b2142!important;font-weight:750!important;letter-spacing:-.025em;line-height:1.22}
+.eduvish-calculator h1{font-size:clamp(2rem,5vw,3.25rem)!important;font-weight:780!important;line-height:1.12!important;letter-spacing:-.04em!important}
+.eduvish-calculator p,.eduvish-calculator li{color:#5c536d!important;font-size:.94rem;line-height:1.72}
+.eduvish-calculator label{color:#413650!important;font-weight:650}
+.eduvish-calculator small,.eduvish-calculator [class~="text-slate-400"]{color:#6b617d!important}
+.eduvish-calculator [class*="bg-slate-950"]{background:#f7f4fc!important}
+.eduvish-calculator input,.eduvish-calculator select,.eduvish-calculator textarea{min-height:2.75rem;color:#30263f!important;background:#fff!important;border:1px solid #dcd2ed!important;border-radius:.85rem!important;box-shadow:0 1px 2px rgba(55,32,100,.04)!important}
+.eduvish-calculator input::placeholder,.eduvish-calculator textarea::placeholder{color:#8a8198!important}
+.eduvish-calculator [role="tab"]{border-radius:.9rem!important;font-weight:650!important}
+.eduvish-calculator [role="tab"][data-state="active"]{color:#fff!important;background:linear-gradient(110deg,#7540df,#5f2cc8)!important;box-shadow:0 5px 14px rgba(99,53,198,.2)!important}
+.eduvish-calculator button:not([aria-label]){font-weight:650!important}
+
+/* EduVish9 blue palette: white surfaces, navy copy, blue actions, and pale-cyan highlights. */
+:root{--background:0 0% 100%;--foreground:235 58% 28%;--card:0 0% 100%;--card-foreground:235 58% 28%;--popover:0 0% 100%;--popover-foreground:235 58% 28%;--primary:211 100% 42%;--primary-foreground:0 0% 100%;--secondary:193 54% 75%;--secondary-foreground:235 58% 28%;--muted:205 35% 96%;--muted-foreground:211 30% 53%;--accent:193 54% 75%;--accent-foreground:235 58% 28%;--border:210 32% 88%;--input:210 32% 88%;--ring:211 100% 42%}
+body.antialiased,body:not(.antialiased){color:#21277B!important;background:#fff!important}
+body.antialiased>div{color:#21277B}
+body.antialiased header,body:not(.antialiased) header{background:rgba(255,255,255,.97)!important;border-color:#D8E4F0!important;box-shadow:0 4px 20px rgba(33,39,123,.06)!important}
+body.antialiased header nav a:not([class*="text-emerald-400"]),body.antialiased header nav button{color:#5F83B1!important}
+body.antialiased header nav a[class*="text-emerald-400"]{color:#006AD7!important;background:#E8F6FA!important;border-color:#9AD9EA!important}
+.glass-card,[class*="bg-white/"],[class*="bg-slate-900"],[class*="bg-slate-950"],[class*="bg-[#060913]"]{background-color:#fff!important;background-image:none;border-color:#D8E4F0!important;box-shadow:0 10px 28px rgba(33,39,123,.07)!important}
+body.antialiased [class~="text-white"],body.antialiased [class~="text-slate-100"],body.antialiased [class~="text-slate-200"],body.antialiased [class~="text-slate-300"]{color:#21277B!important}
+body.antialiased [class~="text-slate-400"],body.antialiased [class~="text-slate-500"]{color:#5F83B1!important}
+body.antialiased [class~="text-slate-950"]{color:#fff!important}
+body.antialiased [class~="text-emerald-400"],body.antialiased [class~="text-emerald-300"],body.antialiased [class~="text-cyan-400"],body.antialiased [class~="text-teal-400"]{color:#006AD7!important}
+body.antialiased button[class~="text-white"],body.antialiased a[class~="text-white"],body.antialiased [role="button"][class~="text-white"],body.antialiased [class*="bg-emerald-500"][class~="text-white"],body.antialiased [class*="bg-cyan-500"][class~="text-white"]{color:#fff!important}
+[class*="border-white/"],[class*="border-slate-800"],[class*="border-emerald-500/"],[class*="border-cyan-500/"]{border-color:#D8E4F0!important}
+[class*="bg-emerald-500/"],[class*="bg-cyan-500/"],[class*="bg-teal-500/"]{background-color:#E8F6FA!important;color:#21277B!important}
+[class~="bg-emerald-500"],[class~="bg-cyan-500"],[class~="bg-teal-500"]{background:#006AD7!important;color:#fff!important}
+[class*="bg-emerald-500/90"],[class*="bg-cyan-500/90"],[class*="bg-teal-500/90"],[class*="bg-emerald-500/80"],[class*="bg-cyan-500/80"],[class*="bg-teal-500/80"]{background:#006AD7!important;color:#fff!important;box-shadow:0 8px 22px rgba(0,106,215,.2)!important}
+[class*="from-emerald-"],[class*="to-cyan-"],[class*="via-emerald-"]{--tw-gradient-from:#006AD7 var(--tw-gradient-from-position)!important;--tw-gradient-to:rgba(0,106,215,0) var(--tw-gradient-to-position)!important;--tw-gradient-stops:var(--tw-gradient-from),#21277B var(--tw-gradient-via-position),var(--tw-gradient-to)!important}
+body.antialiased main :is(h1,h2),body:not(.antialiased) :is(h1,h2){color:#21277B!important}
+body.antialiased main :is(h3,h4),body:not(.antialiased) :is(h3,h4){color:#006AD7!important}
+body.antialiased main p,body.antialiased main li,body.antialiased main label,body:not(.antialiased) .policy p,body:not(.antialiased) .policy ul{color:#21277B!important}
+body.antialiased a,body:not(.antialiased) a{color:#006AD7}
+body.antialiased a:hover,body:not(.antialiased) a:hover{color:#21277B}
+.text-gradient,[class*="text-gradient-"]{background-image:linear-gradient(110deg,#006AD7,#21277B)!important;color:#006AD7!important;-webkit-text-fill-color:transparent!important}
+.eduvish-quick-tools{border-color:#D8E4F0!important;background:linear-gradient(140deg,#fff,#F2FAFD)!important;box-shadow:0 16px 40px rgba(33,39,123,.08)!important}
+.eduvish-kicker,.eduvish-tool-icon,.eduvish-tool-arrow{color:#006AD7!important}
+.eduvish-tools-heading h2,.eduvish-tool-copy strong{color:#21277B!important}
+.eduvish-tools-note,.eduvish-tool-copy small{color:#5F83B1!important}
+.eduvish-tool-card{border-color:#D8E4F0!important;background:#fff!important;color:#21277B!important}
+.eduvish-tool-icon{background:#9AD9EA!important}
+.eduvish-tool-card:hover{border-color:#9AD9EA!important;box-shadow:0 12px 24px rgba(0,106,215,.14)!important}
+.eduvish-footer{border-color:#D8E4F0!important;background:linear-gradient(180deg,#fff,#F2FAFD)!important;color:#21277B!important}
+.eduvish-footer-brand p,.eduvish-footer-group a,.eduvish-footer-bottom{color:#21277B!important}
+.eduvish-brand,.eduvish-footer-group h2{color:#21277B!important}
+.eduvish-social a{border-color:#D8E4F0!important;color:#006AD7!important;background:#fff!important}
+.eduvish-footer-group a:hover,.eduvish-social a:hover{color:#006AD7!important;border-color:#9AD9EA!important}
+.eduvish-footer-bottom{border-color:#D8E4F0!important}
+.eduvish-feature-tag{background:#9AD9EA!important;color:#21277B!important}
+.eduvish-feature-copy h3{color:#21277B!important}
+.eduvish-feature-copy p{color:#21277B!important}
+.eduvish-feature-link{border-color:#D8E4F0!important;color:#006AD7!important}
+#browse a h3{color:#21277B!important}#browse a p{color:#21277B!important}
+body:not(.antialiased) .policy section{background:#fff!important;border-color:#D8E4F0!important;box-shadow:0 10px 28px rgba(33,39,123,.07)!important}
+body:not(.antialiased) .policy h2,body:not(.antialiased) .policy h3,body:not(.antialiased) .brand,body:not(.antialiased) .hero h1{color:#21277B!important}
+body:not(.antialiased) .notice{background:#E8F6FA!important;border-color:#D8E4F0!important;color:#21277B!important}
+body:not(.antialiased) footer{background:#F2FAFD!important;color:#21277B!important;border-color:#D8E4F0!important}
+.eduvish-main button:focus-visible,.eduvish-main [role="button"]:focus-visible,.eduvish-main a:focus-visible{outline-color:#006AD7!important}
+.eduvish-calculator{color:#21277B!important}
+.eduvish-calculator :is(h1,h2){color:#21277B!important}
+.eduvish-calculator :is(h3,h4){color:#006AD7!important}
+.eduvish-calculator p,.eduvish-calculator li,.eduvish-calculator label{color:#21277B!important}
+.eduvish-calculator small,.eduvish-calculator [class~="text-slate-400"]{color:#5F83B1!important}
+.eduvish-calculator [class*="bg-slate-950"]{background:#F2FAFD!important}
+.eduvish-calculator input,.eduvish-calculator select,.eduvish-calculator textarea{border-color:#D8E4F0!important;color:#21277B!important}
+.eduvish-calculator input:focus,.eduvish-calculator select:focus,.eduvish-calculator textarea:focus{outline-color:#006AD7!important}
+.eduvish-calculator [role="tab"][data-state="active"]{background:#006AD7!important;color:#fff!important;box-shadow:0 5px 14px rgba(0,106,215,.2)!important}
+@media(max-width:639px){.eduvish-mobile-nav{border-color:#D8E4F0!important;background:rgba(255,255,255,.97)!important;box-shadow:0 12px 36px rgba(33,39,123,.15)!important}.eduvish-mobile-nav>div>a{color:#5F83B1!important}.eduvish-mobile-nav>div>a:hover{background:#E8F6FA!important;color:#006AD7!important}.eduvish-mobile-nav>div>a[class*="text-emerald-400"]{color:#006AD7!important}.eduvish-mobile-actions>div>button{background:#006AD7!important;color:#fff!important;box-shadow:0 8px 24px rgba(0,106,215,.3)!important}.eduvish-mobile-actions>div>button:hover{background:#21277B!important;box-shadow:0 11px 28px rgba(0,106,215,.36)!important}}
+
+/* Final usability polish for contrast, keyboard access, and small screens. */
+:root{color-scheme:light;--background:0 0% 100%;--foreground:235 58% 28%;--card:0 0% 100%;--card-foreground:235 58% 28%;--primary:211 100% 42%;--primary-foreground:0 0% 100%;--secondary:193 54% 75%;--secondary-foreground:235 58% 28%;--muted:205 35% 96%;--muted-foreground:210 28% 42%;--border:210 35% 88%;--input:210 35% 88%;--ring:211 100% 42%}
+body.antialiased,body:not(.antialiased){background:#fff!important;color:#21277B!important}
+body.antialiased main :is(h1,h2,h3,h4),body:not(.antialiased) :is(h1,h2,h3,h4){color:#21277B!important}
+body.antialiased main :is(p,li,label),body:not(.antialiased) .policy :is(p,li,label){color:#21277B!important}
+body.antialiased :is(input,select,textarea){color:#21277B!important;background:#fff!important;border-color:#D8E4F0!important}
+body.antialiased :is(input,select,textarea)::placeholder{color:#5F83B1!important;opacity:1}
+body.antialiased :is(a,button,[role=button],input,select,textarea):focus-visible{outline:3px solid #006AD7!important;outline-offset:3px}
+body.antialiased button:disabled,body.antialiased [aria-disabled=true]{opacity:.62;cursor:not-allowed}
+body.antialiased [class*="bg-emerald-500"][class*="text-white"],body.antialiased [class*="bg-cyan-500"][class*="text-white"],body.antialiased [class*="bg-teal-500"][class*="text-white"]{color:#fff!important}
+.eduvish-footer-group a{min-height:24px;display:inline-flex;align-items:center}
+.eduvish-tool-card:focus-visible,.eduvish-social a:focus-visible{outline:3px solid #006AD7!important;outline-offset:3px}
+@media(max-width:640px){.eduvish-footer-inner{width:calc(100% - 1.5rem);padding-top:2.5rem}.eduvish-footer-top{grid-template-columns:1fr;gap:1.6rem}.eduvish-footer-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}.eduvish-footer-bottom{align-items:flex-start;flex-direction:column}.eduvish-tools-heading{align-items:flex-start;flex-direction:column}.eduvish-tools-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.eduvish-tool-card{padding:.85rem;gap:.6rem}.eduvish-tool-copy small{font-size:.68rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Keep the calculator's remaining warm accent cards within the approved blue palette. */
+.eduvish-calculator [class*="from-amber-"],.eduvish-calculator [class*="to-amber-"],.eduvish-calculator [class*="from-orange-"],.eduvish-calculator [class*="to-orange-"],.eduvish-calculator [class*="from-rose-"],.eduvish-calculator [class*="to-rose-"]{background-image:linear-gradient(135deg,#fff,#E8F6FA)!important}
+.eduvish-calculator [class*="text-amber-"],.eduvish-calculator [class*="text-orange-"],.eduvish-calculator [class*="text-rose-"],.eduvish-calculator [class*="text-red-"]{color:#006AD7!important}
+.eduvish-calculator [class*="border-amber-"],.eduvish-calculator [class*="border-orange-"],.eduvish-calculator [class*="border-rose-"]{border-color:#9AD9EA!important}
+
+/* Calculator refinements: calm blue cards, readable scheme tabs, and scrollable data tables. */
+.eduvish-calculator [class*="bg-gradient"]:not([class*="bg-clip-text"]){background-image:linear-gradient(140deg,#fff,#E8F6FA)!important}
+.eduvish-calculator [role="tablist"]{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.35rem!important;width:100%!important;height:auto!important;white-space:normal!important}
+.eduvish-calculator [role="tab"]{min-width:0!important;min-height:46px!important;height:auto!important;padding:.55rem .45rem!important;white-space:normal!important;text-align:center!important;line-height:1.25!important;font-size:clamp(.72rem,3.2vw,.88rem)!important}
+.eduvish-calculator table{display:block!important;width:100%!important;max-width:100%!important;overflow-x:auto!important;overscroll-behavior-x:contain;white-space:nowrap}
+.eduvish-calculator th,.eduvish-calculator td{padding:.65rem .55rem!important;color:#21277B!important}
+.eduvish-calculator th{color:#5F83B1!important}
+
+/* Recolor the calculator's orange decorative glow and preserve contrast on its active tab. */
+.eduvish-calculator [class*="bg-orange-"]{background-color:rgba(154,217,234,.22)!important}
+.eduvish-calculator [class*="from-orange-400"][class*="to-orange-600"]{background-image:linear-gradient(135deg,#006AD7,#21277B)!important}
+.eduvish-calculator [role="tab"],[role="tab"].eduvish-calculator{background-image:none!important}
+.eduvish-calculator [role="tab"][data-state="active"]{background:#006AD7!important;color:#fff!important}
+.eduvish-calculator [role="tab"][data-state="inactive"]{background:#F2FAFD!important;color:#21277B!important}
+.eduvish-calculator tbody td:nth-child(2){color:#006AD7!important;font-weight:800!important;opacity:1!important}
+
+.eduvish-calculator [class*="from-orange-400"][class*="to-orange-600"] .text-white{color:#fff!important}.eduvish-calculator tbody td:nth-child(2),.eduvish-calculator tbody td:nth-child(2) *{color:#006AD7!important;opacity:1!important;font-weight:800!important}
+
+/* Dock update: align the quick action with the navigation bar and make it a clear add action. */
+@media(max-width:639px){.eduvish-mobile-actions{bottom:max(19px,calc(env(safe-area-inset-bottom) + 19px))!important;z-index:61!important}.eduvish-mobile-actions>div>button{width:64px!important;height:64px!important;background:#006AD7!important;color:#fff!important;border:3px solid #fff!important;box-shadow:0 0 0 1px #9AD9EA,0 8px 20px rgba(0,106,215,.25)!important}.eduvish-mobile-actions>div>button svg{width:28px!important;height:28px!important;stroke-width:2.5!important}.eduvish-mobile-actions>div>button:hover{background:#21277B!important;transform:translateY(-1px)}}
+
+/* Homepage feature dashboard: compact study shortcuts and a retained live student indicator. */
+.eduvish-dashboard-card{gap:1.4rem!important;padding:clamp(1.3rem,3vw,2.25rem)!important;border:1px solid #D8E4F0!important;background:linear-gradient(145deg,#fff 0%,#F2FAFD 55%,#E8F6FA 100%)!important;box-shadow:0 18px 48px rgba(33,39,123,.1)!important}
+.eduvish-dashboard-card>div.space-y-6{display:flex;flex-direction:column;gap:1.2rem!important}
+.eduvish-dashboard-card h1{margin:.2rem 0!important;color:#21277B!important;font-size:clamp(2rem,5vw,3.6rem)!important;letter-spacing:-.045em!important;line-height:1.03!important}
+.eduvish-dashboard-gradient{background:linear-gradient(100deg,#006AD7,#21277B);background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
+.eduvish-dashboard-intro{max-width:58ch!important;margin:0!important;color:#21277B!important;font-size:clamp(.95rem,1.5vw,1.08rem)!important;line-height:1.65!important}
+.eduvish-dashboard-badge{background:#E8F6FA!important;border-color:#9AD9EA!important;color:#21277B!important;padding:.45rem .75rem!important;font-size:.65rem!important;letter-spacing:.1em!important}
+.eduvish-live-counter{background:#fff!important;border:1px solid #D8E4F0!important;border-radius:999px!important;padding:.52rem .8rem!important;box-shadow:0 4px 14px rgba(33,39,123,.06)}
+.eduvish-live-counter>span:last-child{color:#21277B!important;font-size:.73rem!important}
+.eduvish-live-counter .animate-ping{background:#006AD7!important}.eduvish-live-counter .relative.inline-flex{background:#006AD7!important}
+.eduvish-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;margin-top:.1rem}
+.eduvish-feature-item{display:flex;align-items:center;gap:.65rem;min-width:0;padding:.75rem;border:1px solid #D8E4F0;border-radius:1rem;background:rgba(255,255,255,.88);color:#21277B!important;text-decoration:none!important;box-shadow:0 5px 16px rgba(33,39,123,.045);animation:eduvish-feature-in .42s both;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.eduvish-feature-item:nth-child(2){animation-delay:.05s}.eduvish-feature-item:nth-child(3){animation-delay:.1s}.eduvish-feature-item:nth-child(4){animation-delay:.15s}
+.eduvish-feature-item:hover{transform:translateY(-2px);border-color:#9AD9EA;box-shadow:0 10px 22px rgba(0,106,215,.11)}
+.eduvish-feature-icon{display:grid;place-items:center;flex:0 0 2.35rem;width:2.35rem;height:2.35rem;border-radius:.8rem;background:#E8F6FA;color:#006AD7}
+.eduvish-feature-icon svg{width:1.2rem;height:1.2rem}
+.eduvish-feature-item>span:nth-child(2){display:flex;flex:1;min-width:0;flex-direction:column;gap:.15rem}
+.eduvish-feature-item strong{color:#21277B;font-size:.82rem;font-weight:800;line-height:1.25}
+.eduvish-feature-item small{color:#5F83B1;font-size:.68rem;line-height:1.3}
+.eduvish-feature-arrow{color:#006AD7;font-size:1rem;font-weight:800}
+.eduvish-dashboard-cta{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:.65rem 1rem;border:1px solid #9AD9EA;border-radius:999px;background:#fff;color:#006AD7!important;font-size:.86rem;font-weight:750;text-decoration:none!important;transition:background .18s ease,transform .18s ease}
+.eduvish-dashboard-cta svg{width:1.1rem;height:1.1rem}
+.eduvish-dashboard-cta:hover{background:#E8F6FA;transform:translateY(-1px)}
+.eduvish-dashboard-card>div.pt-8{display:flex;flex-wrap:wrap;gap:.65rem!important;padding-top:.25rem!important}
+.eduvish-dashboard-card>div.pt-8>button,.eduvish-dashboard-card>div.pt-8>a{min-height:44px!important;border-radius:999px!important}
+@keyframes eduvish-feature-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:520px){.eduvish-dashboard-card{padding:1.2rem!important}.eduvish-feature-grid{gap:.5rem}.eduvish-feature-item{gap:.5rem;padding:.65rem}.eduvish-feature-icon{flex-basis:2rem;width:2rem;height:2rem}.eduvish-feature-item strong{font-size:.75rem}.eduvish-feature-item small{font-size:.63rem}.eduvish-dashboard-card>div.pt-8{gap:.5rem!important}.eduvish-dashboard-card>div.pt-8>button,.eduvish-dashboard-card>div.pt-8>a{padding-inline:.85rem!important;font-size:.8rem!important}}
+@media(prefers-reduced-motion:reduce){.eduvish-feature-item{animation:none!important;transition:none!important}}
+
+.eduvish-contact-status{margin:.8rem 0 0;padding:.85rem 1rem;border:1px solid #D8E4F0;border-radius:1rem;background:#F2FAFD;color:#21277B;font-size:.9rem;line-height:1.5}.eduvish-contact-status[data-state="success"]{border-color:#9AD9EA;background:#E8F6FA;color:#21277B}.eduvish-contact-status[data-state="error"]{border-color:#dca8a8;background:#fff5f5;color:#8b2727}.eduvish-contact-status[data-state="loading"]{color:#5F83B1}.eduvish-contact-spinner{display:inline-block;width:1em;height:1em;margin-right:.55rem;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;vertical-align:-.15em;animation:eduvish-contact-spin .7s linear infinite}.eduvish-honeypot{position:absolute!important;left:-10000px!important;top:auto!important;width:1px!important;height:1px!important;overflow:hidden!important}@keyframes eduvish-contact-spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.eduvish-contact-spinner{animation-duration:2s}}

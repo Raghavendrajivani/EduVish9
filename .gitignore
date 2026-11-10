@@ -1,0 +1,7 @@
+# Never publish local Cloudflare or Supabase secrets.
+.dev.vars
+.env
+.env.*
+!.env.example
+node_modules/
+.wrangler/
